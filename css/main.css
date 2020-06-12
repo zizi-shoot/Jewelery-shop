@@ -89,6 +89,7 @@
 }
 
 .burger__line {
+
 	width: 30px;
 	height: 2px;
 	background-color: #fff;
@@ -108,9 +109,12 @@
 }
 
 .hero {
+
 	display: flex;
+	/* display: none; */
 	flex-direction: column;
 	padding-top: 42.8vh;
+	margin-bottom: 20px;
 	height: 100vh;
 }
 
@@ -215,3 +219,60 @@
 .hero-offer__price::after {
 	content: '\20BD';
 }
+
+.divisions {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.divisions__link {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(50% - 10.5px);
+	height: 40.7vw;
+	font-family: 'Forum', serif;
+	font-size: 64px;
+	letter-spacing: 0.03em;
+	text-align: center;
+	transition: transform .2s;
+}
+
+.divisions__link:hover {
+	transform: scale(0.95);
+}
+
+.divisions__link::before {
+	content: 'Перейти в раздел';
+	position: absolute;
+	top: 39%;
+	font-family: 'Futura PT';
+	font-weight: 300;
+	font-size: 24px;
+	letter-spacing: 0;
+}
+
+.divisions__link::after {
+	content: '';
+	position: absolute;
+	bottom: 40%;
+	width: 130px;
+	height: 1px;
+	background-color: #fff;
+}
+
+.div-men {
+	background: linear-gradient(rgba(39, 39, 39, .4), rgba(39, 39, 39, .4)),
+		url('../img/div-men.jpg') no-repeat;
+		background-size: cover;
+
+}
+
+.div-women {
+	background: linear-gradient(rgba(39, 39, 39, .4), rgba(39, 39, 39, .4)),
+		url('../img/div-women.jpg') no-repeat;
+		background-size: cover;
+}
+
