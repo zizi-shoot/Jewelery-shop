@@ -1,61 +1,66 @@
 @font-face {
-  font-family: 'Forum';
-  src: local('Forum'),
-    url('../fonts/Forum.woff') format('woff'),
-    url('../fonts/Forum.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Forum';
+	src: local('Forum'),
+		url('../fonts/Forum.woff') format('woff'),
+		url('../fonts/Forum.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: local('Futura PT Demi'), local('Futura-PT-Demi'),
-    url('') format('woff'), url('') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Futura PT';
+	src: local('Futura PT Demi'), local('Futura-PT-Demi'),
+		url('') format('woff'), url('') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: local('Futura PT Medium'), local('Futura-PT-Medium'),
-    url('../fonts/FuturaPT-Medium.woff') format('woff'), url('../fonts/FuturaPT-Medium.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Futura PT';
+	src: local('Futura PT Medium'), local('Futura-PT-Medium'),
+		url('../fonts/FuturaPT-Medium.woff') format('woff'), url('../fonts/FuturaPT-Medium.woff2') format('woff2');
+	font-weight: 450;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: local('Futura PT Book'), local('Futura-PT-Book'),
-    url('../fonts/FuturaPT-Book.woff') format('woff'), url('../fonts/FuturaPT-Book.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Futura PT';
+	src: local('Futura PT Book'), local('Futura-PT-Book'),
+		url('../fonts/FuturaPT-Book.woff') format('woff'), url('../fonts/FuturaPT-Book.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT';
-  src: local('Futura PT Light'), local('Futura-PT-Light'),
-    url('../fonts/FuturaPT-Light.woff') format('woff'), url('../fonts/FuturaPT-Light.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Futura PT';
+	src: local('Futura PT Light'), local('Futura-PT-Light'),
+		url('../fonts/FuturaPT-Light.woff') format('woff'), url('../fonts/FuturaPT-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Segoe UI';
-  src: local('Segoe UI Italic'), local('Segoe-UI-Italic') url('../fonts/SegoeUI-Italic.woff') format('woff'), url('../fonts/SegoeUI-Italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Segoe UI';
+	src: local('Segoe UI Italic'), local('Segoe-UI-Italic'),
+		url('../fonts/SegoeUI-Italic.woff') format('woff'), url('../fonts/SegoeUI-Italic.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Segoe UI';
-  src: local('Segoe UI Light Italic'), local('Segoe-UI-Light-Italic') url('../fonts/SegoeUI-Light-Italic.woff') format('woff'), url('../fonts/SegoeUI-Light-Italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Segoe UI';
+	src: local('Segoe UI Light Italic'), local('Segoe-UI-Light-Italic'),
+		url('../fonts/SegoeUI-Light-Italic.woff') format('woff'), url('../fonts/SegoeUI-Light-Italic.woff2') format('woff2');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
 }
+
+
+

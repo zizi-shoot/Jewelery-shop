@@ -6,45 +6,51 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>Moon River</title>
-	<link rel="preload" href="./fonts/FuturaPT-Book.woff2" as="font">
-	<link rel="preload" href="./fonts/FuturaPT-Light.woff2" as="font">
+	<!-- <link rel="preload" href="./fonts/FuturaPT-Book.woff2" as="font"> -->
+	<!-- <link rel="preload" href="./fonts/FuturaPT-Light.woff2" as="font"> -->
 	<link rel="stylesheet" href="./css/fonts.css">
+	<link rel="stylesheet" href="./css/_normalize.css">
+	<link rel="stylesheet" href="./css/_global.css">
 	<link rel="stylesheet" href="./css/main.css">
 	<base href="#">
 </head>
 
 <body>
 	<header class="header">
-		<img class="header__logo" src="./img/header-logo.svg" alt="Moon River">
-		<ul class="header__btns head-btns">
-			<li class="head-btns__favorite favorite"><a href="" class="favorite__link" aria-label="Избранное"></a></li>
-			<li class="head-btns__profile profile"><a href="" class="profile__link" aria-label="Профиль"></a></li>
-			<li class="head-btns__cart cart"><a href="" class="cart__link" aria-label="Корзина"></a></li>
-		</ul>
-		<button class="header__burger burger" aria-label="Меню">
-			<span class="burger__line line-1"></span>
-			<span class="burger__line line-2"></span>
-			<span class="burger__line line-3"></span>
-		</button>
+		<div class="header__container container">
+			<img class="header__logo" src="./img/header-logo.svg" alt="Moon River">
+			<ul class="header__links head-links">
+				<li class="head-links__favorite favorite"><a href="" class="favorite__link icon-link"
+						aria-label="Избранное"></a></li>
+				<li class="head-links__profile profile"><a href="" class="profile__link icon-link" aria-label="Профиль"></a>
+				</li>
+				<li class="head-links__cart cart"><a href="" class="cart__link icon-link" aria-label="Корзина"></a></li>
+			</ul>
+			<button class="header__burger burger" aria-label="Меню">
+				<span class="burger__line line-1"></span>
+				<span class="burger__line line-2"></span>
+				<span class="burger__line line-3"></span>
+			</button>
+		</div>
 	</header>
 
 	<main class="main">
-		<section class="hero">
-			<h1 class="hero__title title">High Jewelry</h1>
-			<img class="hero__img" src="./img/hero-img.png" alt="Кольцо Тринити">
-			<a href="" class="hero__link">Смотреть коллекцию</a>
-			<footer class="hero__footer hero-footer">
-				<div class="hero-footer__language language">
-					<button class="language__ru language__ru--active" aria-label="Русский язык">ru</button>
-					<button class="language__en" aria-label="Английский язык">en</button>
+			<section class="hero container">
+				<h1 class="hero__title title">High Jewelry</h1>
+				<img class="hero__img" src="./img/hero-img.png" alt="Кольцо Тринити">
+				<a href="" class="hero__link">Смотреть коллекцию</a>
+				<div class="hero__wrapper ">
+					<div class="hero__language language">
+						<button class="language__ru language__ru--active" aria-label="Русский язык">ru</button>
+						<button class="language__en" aria-label="Английский язык">en</button>
+					</div>
+					<div class="hero__offer hero-offer">
+						<h4 class="hero-offer__title offer-title"><a href="" class="offer-title__link">Кольцо Trinity, Cartier</a></h4>
+						<p class="hero-offer__info">Белое золото, бриллианты</p>
+						<p class="hero-offer__price">498 000 </p>
+					</div>
 				</div>
-				<div class="hero-footer__offer footer-offer">
-					<h4 class="footer-offer__title">Кольцо Trinity, Cartier</h4>
-					<p class="footer-offer__info">Белое золото, бриллианты</p>
-					<p class="footer-offer__price">498 000 </p>
-				</div>
-			</footer>
-		</section>
+			</section>
 	</main>
 </body>
 
