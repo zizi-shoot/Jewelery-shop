@@ -1,2 +1,2 @@
-# Jewelery-shop
+# Jewelry-shop
 Учебный проект
