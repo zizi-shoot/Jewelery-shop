@@ -19,7 +19,7 @@
 */
 
 .container {
-	padding: 0 162px;
+	padding: 0 11.2vw;
 }
 
 .header {
@@ -103,7 +103,7 @@
 	right: 0;
 	top: 0;
 	height: 100vh;
-	width: 562px;
+	width: 39%;
 	z-index: -1;
 }
 
@@ -125,17 +125,17 @@
 
 .hero__img {
 	position: relative;
-	right: 225px;
+	right: 15.6vw;
 	align-self: flex-end;
 	margin-top: -84px;
 	margin-bottom: -35px;
-	height: 170px;
+	height: 11.8vw;
 }
 
 .hero__link {
 	position: relative;
-	right: 172px;
-	align-self: center;
+	left: 20.7vw;
+	max-width: 200px;
 	flex: 1 0 auto;
 	font-family: 'Segoe UI';
 	font-style: italic;
