@@ -266,13 +266,13 @@
 .div-men {
 	background: linear-gradient(rgba(39, 39, 39, .4), rgba(39, 39, 39, .4)),
 		url('../img/div-men.jpg') no-repeat;
-		background-size: cover;
+	background-size: cover;
 
 }
 
 .div-women {
 	background: linear-gradient(rgba(39, 39, 39, .4), rgba(39, 39, 39, .4)),
 		url('../img/div-women.jpg') no-repeat;
-		background-size: cover;
+	background-size: cover;
 }
 
