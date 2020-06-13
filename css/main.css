@@ -276,3 +276,102 @@
 	background-size: cover;
 }
 
+.location {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.location__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	padding: 12vw 152px 12vw 162px;
+	background-color: #272727;
+}
+
+.location__title {
+	margin-bottom: 16px;
+	font-family: 'Forum';
+	font-size: 48px;
+	line-height: 53px;
+	letter-spacing: 0.03em;
+}
+
+.location__description {
+	margin-bottom: 59px;
+	font-family: 'Futura PT';
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 23px;
+}
+
+.location__search {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 9px;
+	border-bottom: 1.8px solid #FFFFFF;
+
+}
+
+.search__field {
+	flex-grow: 1;
+	padding-right: 20px;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	outline: none;
+}
+
+.search__field::placeholder {
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.search__btn {
+	width: 30px;
+	background: url('../img/search-arrow.svg') 0 3px no-repeat transparent;
+	border: none;
+	outline: none;
+}
+
+.location__map {
+	flex-grow: 1;
+	height: 42vw;
+}
+
+.stock {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr 1fr;
+	gap: 20px;
+}
+
+.stock__item:not(.central-item) {
+	padding: 47px 30px 20px;
+}
+
+.item-1 {}
+
+.item-2 {}
+
+.item-3 {}
+
+.item-4 {}
+
+.central-item {
+	grid-column: 2/3;
+	grid-row: 1/3;
+}
+.central-item .stock-item__img {
+	position: absolute;
+}
+.stock-item__img {}
+
+.stock-item__title {}
+
+.stock-item__info {}
+
+.stock-item__price {}
