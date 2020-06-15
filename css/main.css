@@ -191,6 +191,7 @@
 [class*=hero-offer__]:not(.hero-offer__img) {
 	transition: transform .1s
 }
+
 .hero-offer:hover [class*=hero-offer__]:not(.hero-offer__img) {
 	transform: scale(1.2);
 }
@@ -198,6 +199,7 @@
 .hero-offer:hover .hero-offer__img {
 	transform: translateX(18.7vw) scale(1.2);
 }
+
 .hero-offer__title {
 	margin-bottom: 10px;
 	font-size: 16px;
@@ -388,8 +390,13 @@
 	grid-column: 2/3;
 	grid-row: 1/3;
 	display: flex;
+	flex-direction: column;
 	justify-content: flex-end;
 	padding: 20px 30px;
+}
+
+.central-item__article {
+	z-index: 0;
 }
 
 .central-article__img {
@@ -397,6 +404,7 @@
 	left: 0;
 	right: 0;
 	top: 0;
+	z-index: -1;
 	width: 100%;
 	height: 100%;
 }
