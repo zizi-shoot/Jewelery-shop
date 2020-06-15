@@ -6,8 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<title>Moon River</title>
-	<!-- <link rel="preload" href="./fonts/FuturaPT-Book.woff2" as="font"> -->
-	<!-- <link rel="preload" href="./fonts/FuturaPT-Light.woff2" as="font"> -->
 	<link rel="stylesheet" href="./css/fonts.css">
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/global.css">
@@ -24,7 +22,7 @@
 			<ul class="header__links head-links">
 				<li class="head-links__favorite favorite"><a href="" class="favorite__link icon-link"
 						aria-label="Избранное"></a></li>
-				<li class="head-links__profile profile"><a href="" class="profile__link icon-link" aria-label="Профиль"></a>
+				<li class="head-links__account account"><a href="" class="account__link icon-link" aria-label="Профиль"></a>
 				</li>
 				<li class="head-links__cart cart"><a href="" class="cart__link icon-link" aria-label="Корзина"></a></li>
 			</ul>
@@ -56,6 +54,7 @@
 		</section>
 
 		<section class="divisions">
+			<h2 class="visually-hidden">Переход в мужской и женский разделы</h2>
 			<a href="" class="divisions__link div-men">Для мужчин</a>
 			<a href="" class="divisions__link div-women">Для женщин</a>
 		</section>
@@ -64,38 +63,39 @@
 			<div class="location__wrapper">
 				<h2 class="location__title">Найди<br>бутик около себя</h2>
 				<p class="location__description">Введите свой адрес и узнайте о самых ближайших бутиках к вам</p>
-				<form action="" class="location__search search">
+				<form class="location__search search">
 					<input type="text" class="search__field" placeholder="Введите адрес">
-					<button type="submit" class="search__btn"></button>
+					<button type="submit" class="search__btn" aria-label="Поиск"></button>
 				</form>
 			</div>
 			<img src="./img/Map.jpg" class="location__map" alt="Карта">
 		</section>
 
 		<section class="stock">
+			<h2 class="visually-hidden">Ассортимент магазина</h2>
 			<article class="stock__item stock-item item-1">
-				<img src="./img/jows.png" alt="" class="stock-item__img">
+				<img src="./img/jows.png" alt="Кольцо Jow`s" class="stock-item__img">
 				<h3 class="stock-item__title title"><a href="" class="title__link">Кольцо Jow’s, Cartier</a></h3>
 				<p class="stock-item__info">Белое золото, бриллианты</p>
 				<p class="stock-item__price">674 000</p>
 			</article>
 
 			<article class="stock__item central-item">
-				<img src="./img/etoile.jpg" alt="" class="central-item__img">
+				<img src="./img/etoile.jpg" alt="Колье Etoile" class="central-item__img">
 				<h3 class="central-item__title title"><a href="" class="title__link">Колье Etoile, Hublot</a></h3>
 				<p class="central-item__info">Белое золото, бриллианты</p>
 				<p class="central-item__price">539 000</p>
 			</article>
 
 			<article class="stock__item stock-item item-2">
-				<img src="./img/moon.png" alt="" class="stock-item__img">
+				<img src="./img/moon.png" alt="Серьги Moon" class="stock-item__img">
 				<h3 class="stock-item__title title"><a href="" class="title__link">Серьги Moon, Hublot</a></h3>
 				<p class="stock-item__info">Желтое золото, сапфир</p>
 				<p class="stock-item__price">498 000</p>
 			</article>
 
 			<article class="stock__item stock-item item-3">
-				<img src="./img/croix.png" alt="" class="stock-item__img">
+				<img src="./img/croix.png" alt="Кольцо Croix" class="stock-item__img">
 				<h3 class="stock-item__title title"><a href="" class="title__link">Кольцо Croix, Cartier</a></h3>
 				<p class="stock-item__info">Желтое, белое, розовое золото</p>
 				<p class="stock-item__price">432 000</p>
@@ -103,13 +103,66 @@
 
 
 			<article class="stock__item stock-item item-4">
-				<img src="./img/win.png" alt="" class="stock-item__img">
+				<img src="./img/win.png" alt="Серьги Win" class="stock-item__img">
 				<h3 class="stock-item__title title"><a href="" class="title__link">Серьги Win, Blancpain</a></h3>
 				<p class="stock-item__info">Желтое золото, жемчуг</p>
 				<p class="stock-item__price">398 000</p>
 			</article>
 		</section>
+
+		<section class="communications">
+			<div class="communications__phone com-phone">
+				<h3 class="com-phone__title">Телефон флагманского магазина</h3>
+				<a href="tel:+7800456456" class="com-phone__number">+7 800 456 456</a>
+			</div>
+			<form class="communications__subscribe subscribe">
+				<label for="email" class="subscribe__label">подпишитесь на новости</label>
+				<div class="subscribe__wrapper">
+					<input type="email" class="subscribe__email" name="email" id="email" placeholder="Введите E-mail">
+					<button type="submit" class="subscribe__btn" aria-label="Подписаться"></button>
+				</div>
+			</form>
+		</section>
 	</main>
+	<footer class="footer">
+		<div class="footer-container container">
+			<nav class="footer__nav footer-nav">
+				<ul class="footer-nav__list">
+					<li class="footer-nav__item"><a href="" class="footer-nav__link">Работа в компании</a></li>
+					<li class="footer-nav__item"><a href="" class="footer-nav__link">Условия пользования</a></li>
+					<li class="footer-nav__item"><a href="" class="footer-nav__link">Выходные данные</a></li>
+					<li class="footer-nav__item"><a href="" class="footer-nav__link">Политика конфиденциальности</a></li>
+					<li class="footer-nav__item"><a href="" class="footer-nav__link">Карта сайта</a></li>
+				</ul>
+			</nav>
+			<div class="footer__bottom-bar">
+				<a href="" class="footer__logo"><img src="./img/footer-logo.svg" alt="Moon River" ></a>
+				<div class="footer__contacts contacts">
+					<h3 class="contacts__title">Телефон горячей линии</h3>
+					<a href="tel:+7800456456" class="contacts__phone-number">+7 800 456 456</a>
+					<ul class="contacts__social">
+						<li class="contacts__item facebook"><a href="" class="facebook__link"></a></li>
+						<li class="contacts__item instagram"><a href="" class="instagram__link"></a></li>
+					</ul>
+				</div>
+				<div class="footer__subscribe footer-subscribe">
+					<form class="footer-subscribe__form">
+						<label for="footer-email" class="footer-subscribe__label">подпишитесь на новости</label>
+						<div class="footer-subscribe__wrapper">
+							<input type="email" class="footer-subscribe__email" name="footer-email" id="footer-email"
+								placeholder="Введите E-mail">
+							<button type="submit" class="footer-subscribe__btn" aria-label="Подписаться"></button>
+						</div>
+					</form>
+					<ul class="footer-subscribe__apps apps">
+						<li class="apps__item apps-item"><a href="" class="apps-item__app-store"></a></li>
+						<li class="apps__item apps-item"><a href="" class="apps-item__google-play"></a></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>

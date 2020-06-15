@@ -57,7 +57,19 @@
 	background-image: url('../img/favorite.svg');
 }
 
-.profile__link {
+.favorite__link,
+.account__link,
+.cart__link {
+	transition: transform .2s;
+}
+
+.favorite__link:hover,
+.account__link:hover,
+.cart__link:hover {
+	transform: translateY(-5px) scale(1.5);
+}
+
+.account__link {
 	width: 15px;
 	background-image: url('../img/profile.svg');
 }
@@ -144,7 +156,9 @@
 	font-style: italic;
 	font-weight: 300;
 	color: #272727;
+	transition: transform .3s
 }
+
 
 .hero__link::before {
 	content: '';
@@ -157,6 +171,10 @@
 	background-color: #272727;
 }
 
+.hero__link:hover  {
+transform: translateX(30px);
+
+}
 .hero__wrapper {
 	flex: 0 0 auto;
 	display: flex;
@@ -188,12 +206,14 @@
 }
 
 .offer-title__link {
-
 	font-size: 16px;
 	font-weight: 400;
 	text-align: right;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
+}
+.offer-title__link:hover {
+	border-bottom: 1px solid #fff;
 }
 
 .hero-offer__info {
@@ -348,6 +368,7 @@
 	grid-template-columns: 1fr 1.5fr 1fr;
 	grid-template-rows: repeat(2, calc(100vw / 4 + 40px));
 	gap: 20px;
+	margin-bottom: 20px;
 }
 
 .stock__item {
@@ -450,19 +471,238 @@
 	margin-right: 16px;
 }
 
-.item-1 .title__link:hover{
+.item-1 .title__link:hover {
 	border-bottom: 1px solid #272727;
 }
-.item-2 .title__link:hover{
+
+.item-2 .title__link:hover {
 	border-bottom: 1px solid #272727;
 }
-.item-3 .title__link:hover{
+
+.item-3 .title__link:hover {
 	border-bottom: 1px solid #272727;
 }
-.item-4 .title__link:hover{
+
+.item-4 .title__link:hover {
 	border-bottom: 1px solid #272727;
 }
+
 .central-item .title__link:hover {
 	border-bottom: 1px solid #fff;
 }
 
+.communications {
+	background: url('../img/communication.jpg') no-repeat;
+	padding: 12.5vw 14.3vw 11.3vw 62vw;
+}
+
+.communications__phone {
+	margin-bottom: 113px;
+}
+
+
+.com-phone__title {
+	margin-bottom: 31px;
+	font-weight: 400;
+	letter-spacing: -0.9px;
+	text-transform: uppercase;
+	color: #272727;
+
+}
+
+.com-phone__number {
+	font-weight: 300;
+	font-size: 22px;
+	color: #959595;
+}
+
+
+
+.subscribe__label {
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #272727;
+}
+
+.subscribe__wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 82.5%;
+	margin-top: 33px;
+	padding-bottom: 10px;
+	border-bottom: 1.8px solid #272727;
+}
+
+.subscribe__email {
+	flex-grow: 1;
+	padding: 0;
+	padding-right: 10px;
+	font-weight: 300;
+	font-size: 22px;
+	height: 22px;
+	color: #959595;
+	border: none;
+	outline: none;
+}
+
+.subscribe__btn {
+	padding: 0;
+	padding-bottom: 22px;
+	width: 30px;
+	height: 17px;
+	background: url('../img/arrow.svg') 0 4px no-repeat;
+	border: none;
+	outline: none;
+}
+
+.footer {
+	padding-top: 81px;
+	padding-bottom: 89px;
+	background-color: #272727;
+}
+
+.footer__nav {
+	margin-bottom: 90px;
+}
+
+
+.footer-nav__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-nav__item {
+	font-weight: 450;
+	font-size: 14px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	transition: text-shadow .5s;
+
+}
+
+.footer-nav__item:hover {
+	text-shadow: 0 0 10px #fff;
+}
+
+.footer__bottom-bar {
+	display: flex;
+	align-items: center;
+}
+
+.footer__logo {
+	margin-right: auto;
+	margin-bottom: 19px;
+}
+
+
+
+.contacts__title {
+	margin-bottom: 16px;
+	font-size: 14px;
+	letter-spacing: -4.3px;
+	text-transform: uppercase;
+}
+
+.contacts__phone-number {
+
+	font-weight: 300;
+	color: #C2C2C2;
+}
+
+.contacts__social {
+	margin-top: 15px;
+	display: flex;
+}
+
+.contacts__item:first-child {
+	margin-right: 20px;
+}
+
+.contacts__item [class*=__link] {
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+
+.facebook__link {
+	background: url('../img/Facebook.svg') no-repeat;
+}
+
+.instagram__link {
+	background: url('../img/Instagram.svg');
+}
+
+.footer__subscribe {
+	margin-left: 80px;
+}
+
+
+
+.footer-subscribe__label {
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+}
+
+.footer-subscribe__wrapper {
+	display: flex;
+	margin-top: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #fff;
+}
+
+.footer-subscribe__email {
+	flex-grow: 1;
+	padding: 0;
+	padding-right: 10px;
+	width: 250px;
+	height: 22px;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	vertical-align: bottom;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.footer-subscribe__btn {
+	padding: 0;
+	padding-bottom: 22px;
+	width: 30px;
+	height: 17px;
+	background: url('../img/search-arrow.svg')0 4px no-repeat;
+	border: none;
+	outline: none;
+	background-color: transparent;
+
+}
+
+
+.footer-subscribe__apps {
+	display: flex;
+	margin-top: 15px;
+}
+
+
+.apps__item {
+	width: 90px;
+}
+
+.apps-item:first-child {
+	margin-right: 13px;
+}
+
+[class*=apps-item__] {
+	display: block;
+	height: 30px;
+}
+
+.apps-item__app-store {
+	background: url('../img/appstore.svg') no-repeat;
+}
+
+.apps-item__google-play {
+	background: url('../img/googleplay.png') no-repeat;
+}
