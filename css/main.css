@@ -449,3 +449,20 @@
 	margin-bottom: 3.3vw;
 	margin-right: 16px;
 }
+
+.item-1 .title__link:hover{
+	border-bottom: 1px solid #272727;
+}
+.item-2 .title__link:hover{
+	border-bottom: 1px solid #272727;
+}
+.item-3 .title__link:hover{
+	border-bottom: 1px solid #272727;
+}
+.item-4 .title__link:hover{
+	border-bottom: 1px solid #272727;
+}
+.central-item .title__link:hover {
+	border-bottom: 1px solid #fff;
+}
+
