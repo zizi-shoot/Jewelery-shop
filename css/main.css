@@ -111,7 +111,6 @@
 .hero {
 
 	display: flex;
-	/* display: none; */
 	flex-direction: column;
 	padding-top: 42.8vh;
 	margin-bottom: 20px;
@@ -216,8 +215,9 @@
 	color: #EFC58B;
 }
 
-.hero-offer__price::after {
+[class*=__price]::after {
 	content: '\20BD';
+	margin-left: 4px;
 }
 
 .divisions {
@@ -287,14 +287,14 @@
 	flex-direction: column;
 	justify-content: space-between;
 	flex-grow: 1;
-	padding: 12vw 152px 12vw 162px;
+	padding: calc(10vw + 28px) calc(10vw + 8px) calc(10vw + 28px) calc(10vw + 18px);
 	background-color: #272727;
 }
 
 .location__title {
 	margin-bottom: 16px;
 	font-family: 'Forum';
-	font-size: 48px;
+	font-size: calc(3vw + 4.8px);
 	line-height: 53px;
 	letter-spacing: 0.03em;
 }
@@ -340,38 +340,112 @@
 
 .location__map {
 	flex-grow: 1;
-	height: 42vw;
 }
 
 .stock {
 	display: grid;
+	justify-content: space-between;
 	grid-template-columns: 1fr 1.5fr 1fr;
+	grid-template-rows: repeat(2, calc(100vw / 4 + 40px));
 	gap: 20px;
 }
 
-.stock__item:not(.central-item) {
-	padding: 47px 30px 20px;
+.stock__item {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #ededed;
 }
 
-.item-1 {}
+.stock__item:not(.central-item) {
+	padding: 20px 30px;
+}
 
-.item-2 {}
 
-.item-3 {}
-
-.item-4 {}
 
 .central-item {
+	position: relative;
 	grid-column: 2/3;
 	grid-row: 1/3;
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px 30px;
+
 }
-.central-item .stock-item__img {
+
+.central-item__img {
 	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
-.stock-item__img {}
 
-.stock-item__title {}
+.stock-item__img {
+	align-self: center;
+}
 
-.stock-item__info {}
+.stock-item__title,
+.central-item__title {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #272727;
+}
 
-.stock-item__price {}
+.stock-item__info,
+.central-item__info {
+	font-weight: 300;
+	color: #757575;
+}
+
+.stock-item__price,
+.central-item__price {
+	font-family: 'Segoe UI';
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0.03em;
+	color: #E2B67A;
+}
+
+.central-item__title {
+	margin-bottom: 12px;
+	z-index: 1;
+	color: #FFFFFF;
+}
+
+.central-item__info {
+	margin-bottom: 14px;
+	z-index: 1;
+	color: #E7E7E7;
+}
+
+.central-item__price {
+	z-index: 1;
+	color: #EFC58B;
+}
+
+.item-1 .stock-item__img {
+	margin-top: 1.9vw;
+	margin-bottom: 3.9vw;
+
+}
+
+.item-2 .stock-item__img {
+	margin-top: 2.3vw;
+	margin-bottom: 3.4vw;
+}
+
+.item-3 .stock-item__img {
+	margin-top: 2.8vw;
+	margin-bottom: 3.9vw;
+}
+
+.item-4 .stock-item__img {
+	margin-top: 2vw;
+	margin-bottom: 3.3vw;
+	margin-right: 16px;
+}
