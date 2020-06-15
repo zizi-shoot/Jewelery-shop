@@ -18,6 +18,7 @@
 
 	<header class="header">
 		<div class="header__container container">
+			<h1 class="visually-hidden">Ювелирный магазин Moon River</h1>
 			<img class="header__logo" src="./img/header-logo.svg" alt="Moon River">
 			<ul class="header__links head-links">
 				<li class="head-links__favorite favorite"><a href="" class="favorite__link icon-link"
@@ -36,20 +37,19 @@
 
 	<main class="main">
 		<section class="hero container">
-			<h1 class="hero__title title">High Jewelry</h1>
-			<img class="hero__img" src="./img/hero-img.png" alt="Кольцо Тринити">
+			<h2 class="hero__title title">High Jewelry</h2>
 			<a href="" class="hero__link">Смотреть коллекцию</a>
 			<div class="hero__wrapper ">
 				<div class="hero__language language">
 					<button class="language__ru language__ru--active" aria-label="Русский язык">ru</button>
 					<button class="language__en" aria-label="Английский язык">en</button>
 				</div>
-				<div class="hero__offer hero-offer">
-					<h4 class="hero-offer__title offer-title"><a href="" class="offer-title__link">Кольцо Trinity, Cartier</a>
-					</h4>
+				<a class="hero__offer hero-offer">
+					<img class="hero-offer__img" src="./img/hero-img.png" alt="Кольцо Тринити">
+					<h3 class="hero-offer__title">Кольцо Trinity, Cartier</h3>
 					<p class="hero-offer__info">Белое золото, бриллианты</p>
 					<p class="hero-offer__price">498 000</p>
-				</div>
+				</a>
 			</div>
 		</section>
 
@@ -73,41 +73,53 @@
 
 		<section class="stock">
 			<h2 class="visually-hidden">Ассортимент магазина</h2>
-			<article class="stock__item stock-item item-1">
-				<img src="./img/jows.png" alt="Кольцо Jow`s" class="stock-item__img">
-				<h3 class="stock-item__title title"><a href="" class="title__link">Кольцо Jow’s, Cartier</a></h3>
-				<p class="stock-item__info">Белое золото, бриллианты</p>
-				<p class="stock-item__price">674 000</p>
-			</article>
+			<ul class="stock__list">
+				<li class="stock__item stock-item">
+					<article class="stock-item__article item-article item-1">
+						<img src="./img/jows.png" alt="Кольцо Jow`s" class="item-article__img">
+						<h3 class="item-article__title title"><a href="" class="title__link">Кольцо Jow’s, Cartier</a></h3>
+						<p class="item-article__info">Белое золото, бриллианты</p>
+						<p class="item-article__price">674 000</p>
+					</article>
+				</li>
 
-			<article class="stock__item central-item">
-				<img src="./img/etoile.jpg" alt="Колье Etoile" class="central-item__img">
-				<h3 class="central-item__title title"><a href="" class="title__link">Колье Etoile, Hublot</a></h3>
-				<p class="central-item__info">Белое золото, бриллианты</p>
-				<p class="central-item__price">539 000</p>
-			</article>
+				<li class="stock__item central-item">
+					<article class="central-item__article central-article">
+						<img src="./img/etoile.jpg" alt="Колье Etoile" class="central-article__img">
+						<h3 class="central-article__title title"><a href="" class="title__link">Колье Etoile, Hublot</a></h3>
+						<p class="central-article__info">Белое золото, бриллианты</p>
+						<p class="central-article__price">539 000</p>
+					</article>
+				</li>
 
-			<article class="stock__item stock-item item-2">
-				<img src="./img/moon.png" alt="Серьги Moon" class="stock-item__img">
-				<h3 class="stock-item__title title"><a href="" class="title__link">Серьги Moon, Hublot</a></h3>
-				<p class="stock-item__info">Желтое золото, сапфир</p>
-				<p class="stock-item__price">498 000</p>
-			</article>
+				<li class="stock__item stock-item">
+					<article class="stock-item__article item-article item-2">
+						<img src="./img/moon.png" alt="Серьги Moon" class="item-article__img">
+						<h3 class="item-article__title title"><a href="" class="title__link">Серьги Moon, Hublot</a></h3>
+						<p class="item-article__info">Желтое золото, сапфир</p>
+						<p class="item-article__price">498 000</p>
+					</article>
+				</li>
 
-			<article class="stock__item stock-item item-3">
-				<img src="./img/croix.png" alt="Кольцо Croix" class="stock-item__img">
-				<h3 class="stock-item__title title"><a href="" class="title__link">Кольцо Croix, Cartier</a></h3>
-				<p class="stock-item__info">Желтое, белое, розовое золото</p>
-				<p class="stock-item__price">432 000</p>
-			</article>
+				<li class="stock__item stock-item">
+					<article class="stock-item__article item-article item-3">
+						<img src="./img/croix.png" alt="Кольцо Croix" class="item-article__img">
+						<h3 class="item-article__title title"><a href="" class="title__link">Кольцо Croix, Cartier</a></h3>
+						<p class="item-article__info">Желтое, белое, розовое золото</p>
+						<p class="item-article__price">432 000</p>
+					</article>
+				</li>
 
 
-			<article class="stock__item stock-item item-4">
-				<img src="./img/win.png" alt="Серьги Win" class="stock-item__img">
-				<h3 class="stock-item__title title"><a href="" class="title__link">Серьги Win, Blancpain</a></h3>
-				<p class="stock-item__info">Желтое золото, жемчуг</p>
-				<p class="stock-item__price">398 000</p>
-			</article>
+				<li class="stock__item stock-item">
+					<article class="stock-item__article item-article item-4">
+						<img src="./img/win.png" alt="Серьги Win" class="item-article__img">
+						<h3 class="item-article__title title"><a href="" class="title__link">Серьги Win, Blancpain</a></h3>
+						<p class="item-article__info">Желтое золото, жемчуг</p>
+						<p class="item-article__price">398 000</p>
+					</article>
+				</li>
+			</ul>
 		</section>
 
 		<section class="communications">
@@ -116,9 +128,9 @@
 				<a href="tel:+7800456456" class="com-phone__number">+7 800 456 456</a>
 			</div>
 			<form class="communications__subscribe subscribe">
-				<label for="email" class="subscribe__label">подпишитесь на новости</label>
+				<h3 class="subscribe__title">подпишитесь на новости</h3>
 				<div class="subscribe__wrapper">
-					<input type="email" class="subscribe__email" name="email" id="email" placeholder="Введите E-mail">
+					<input type="email" class="subscribe__email" name="email" placeholder="Введите E-mail">
 					<button type="submit" class="subscribe__btn" aria-label="Подписаться"></button>
 				</div>
 			</form>
@@ -136,7 +148,7 @@
 				</ul>
 			</nav>
 			<div class="footer__bottom-bar">
-				<a href="" class="footer__logo"><img src="./img/footer-logo.svg" alt="Moon River" ></a>
+				<a href="" class="footer__logo"><img src="./img/footer-logo.svg" alt="Moon River"></a>
 				<div class="footer__contacts contacts">
 					<h3 class="contacts__title">Телефон горячей линии</h3>
 					<a href="tel:+7800456456" class="contacts__phone-number">+7 800 456 456</a>
@@ -147,10 +159,9 @@
 				</div>
 				<div class="footer__subscribe footer-subscribe">
 					<form class="footer-subscribe__form">
-						<label for="footer-email" class="footer-subscribe__label">подпишитесь на новости</label>
+						<h3 class="footer-subscribe__title">подпишитесь на новости</h3>
 						<div class="footer-subscribe__wrapper">
-							<input type="email" class="footer-subscribe__email" name="footer-email" id="footer-email"
-								placeholder="Введите E-mail">
+							<input type="email" class="footer-subscribe__email" name="footer-email" placeholder="Введите E-mail">
 							<button type="submit" class="footer-subscribe__btn" aria-label="Подписаться"></button>
 						</div>
 					</form>
