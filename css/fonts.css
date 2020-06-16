@@ -11,7 +11,7 @@
 @font-face {
 	font-family: 'Futura PT';
 	src: local('Futura PT Demi'), local('Futura-PT-Demi'),
-		url('') format('woff'), url('') format('woff2');
+		url('../fonts/FuturaPT-Demi.woff') format('woff'), url('../fonts/FuturaPT-Demi.woff2') format('woff2');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
