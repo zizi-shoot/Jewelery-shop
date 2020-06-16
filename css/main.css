@@ -1,5 +1,7 @@
 
-
+.body_menu {
+	background-color: #272727;
+}
 .header {
 	position: absolute;
 	width: 100%;
@@ -12,9 +14,11 @@
 	padding-top: 60px;
 }
 
+
 .header__logo {
 	margin-right: auto;
 }
+
 
 .header__links {
 	display: flex;
@@ -441,20 +445,14 @@
 
 .central-article__title {
 	margin-bottom: 12px;
-	z-index: 1;
 	color: #FFFFFF;
 }
 
 .central-article__info {
 	margin-bottom: 14px;
-	z-index: 1;
 	color: #E7E7E7;
 }
 
-.central-article__info {
-	z-index: 4;
-	color: #EFC58B;
-}
 
 .item-1 .item-article__img {
 	width: 18vw;
@@ -723,7 +721,6 @@
 }
 
 
-/* MENU */
 
 
 
@@ -733,7 +730,9 @@
 
 
 
-/*  */
+
+/* !! MENU */
+
 .menu {
 	position: fixed;
 	background-color: #272727;
@@ -742,8 +741,7 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 10;
-	/* bottom: 100vh; */
-	transition: all 1s;
+	transition: bottom .5s;
 }
 
 .header__container_menu {
@@ -778,8 +776,11 @@
 }
 
 .menu__nav {
+	position: relative;
+	right: 100vw;
 	background-color: #2f2f2f;
 	margin-bottom: auto;
+	transition: right .2s .5s;
 }
 
 .menu-item {
@@ -845,10 +846,13 @@
 }
 
 .menu__footer {
+	position: relative;
+	top: 200vh;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 70px;
 	padding-bottom: 76px;
+	transition: top .5s ;
 }
 
 .menu-footer__hero {

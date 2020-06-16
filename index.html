@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/global.css">
 	<link rel="stylesheet" href="./css/main.css">
+	<script src="./js/script.js" defer></script>
 	<base href="#">
 
 </head>
@@ -289,27 +290,6 @@
 			</div>
 		</div>
 	</footer>
-	<script>
-		document.querySelectorAll('.burger')[0].addEventListener("click", openMenu);
-		document.querySelectorAll('.burger')[0].addEventListener("click", changeBurger)
-		document.querySelectorAll('.burger')[1].addEventListener("click", closeMenu);
-
-		function openMenu() {
-			document.querySelector('.menu').style = 'bottom: 0';
-			document.querySelector('.header__burger').classList.add('header__burger-menu');
-		}
-
-		function closeMenu() {
-			document.querySelector('.menu').style = 'bottom: 100vh'
-		}
-
-		function changeBurger() {
-			document.querySelectorAll('.line-1')[1].classList.add('line-1-menu');
-			document.querySelectorAll('.line-2')[1].classList.add('line-2-menu');
-			document.querySelectorAll('.line-3')[1].classList.add('line-3-menu');
-		}
-
-	</script>
 </body>
 
 </html>
