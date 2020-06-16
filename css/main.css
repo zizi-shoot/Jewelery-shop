@@ -1,7 +1,7 @@
-
 .body_menu {
 	background-color: #272727;
 }
+
 .header {
 	position: absolute;
 	width: 100%;
@@ -63,7 +63,7 @@
 }
 
 .cart__link::after {
-	content: '1';
+	content: attr(data-amount);
 	position: absolute;
 	left: 26px;
 	top: 1px;
@@ -128,7 +128,8 @@
 	bottom: 19.5vw;
 	align-self: flex-end;
 	height: 11.8vw;
-	transition: transform 1s
+	transition: transform 1s;
+	pointer-events: none;
 }
 
 .hero__link {
@@ -741,6 +742,7 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 10;
+	bottom: 100vh;
 	transition: bottom .5s;
 }
 
@@ -832,6 +834,11 @@
 	letter-spacing: 1.8px;
 }
 
+.submenu-item__item a:hover {
+	border-bottom: 1px solid;
+	transition: border 3s;
+}
+
 .submenu-item__item:not(:last-child) {
 	margin-bottom: 1.4vh;
 }
@@ -852,7 +859,7 @@
 	justify-content: space-between;
 	padding-top: 70px;
 	padding-bottom: 76px;
-	transition: top .5s ;
+	transition: top .5s;
 }
 
 .menu-footer__hero {
@@ -870,18 +877,25 @@
 	align-self: flex-start;
 	letter-spacing: 1.2px;
 }
+
 .footer-hero__title {
 	font-family: 'Forum';
 	font-size: 48px;
 	letter-spacing: .9px;
 	text-transform: uppercase;
 }
+
 .footer-hero__link {
 	display: block;
 	align-self: flex-end;
 	padding-right: 54px;
 	letter-spacing: 1.2px;
 	background: url('../img/search-arrow.svg') right -1px no-repeat;
+}
+
+.footer-hero__link:hover {
+	transform: translateX(20px);
+	transition: transform .5s;
 }
 
 .menu-footer__wrapper {
