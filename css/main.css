@@ -516,10 +516,9 @@
 	margin-bottom: 31px;
 	font-size: 18px;
 	font-weight: 400;
-	letter-spacing: -.9px;
+	letter-spacing: .9px;
 	text-transform: uppercase;
 	color: #272727;
-
 }
 
 .com-phone__number {
@@ -726,6 +725,15 @@
 
 /* MENU */
 
+
+
+
+
+
+
+
+
+/*  */
 .menu {
 	position: fixed;
 	background-color: #272727;
@@ -734,74 +742,16 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 10;
-	bottom: 100vh;
+	/* bottom: 100vh; */
 	transition: all 1s;
 }
 
-
-.header__container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.header__container_menu {
 	padding-top: 4vh;
 	padding-bottom: 4vh;
 }
 
-.header__logo {
-	margin-right: auto;
-}
-
-.header__links {
-	display: flex;
-}
-
-.icon-link {
-	display: block;
-	height: 22px;
-	background-repeat: no-repeat;
-}
-
-[class*="head-links__"]:not(:last-child) {
-	margin-right: 38px;
-}
-
-.favorite__link {
-	width: 24px;
-	background-image: url('../img/favorite.svg');
-}
-
-.favorite__link,
-.account__link,
-.cart__link {
-	transition: transform .2s;
-}
-
-.favorite__link:hover,
-.account__link:hover,
-.cart__link:hover {
-	transform: translateY(-5px) scale(1.5);
-}
-
-.account__link {
-	width: 15px;
-	background-image: url('../img/profile.svg');
-}
-
-.cart__link {
-	position: relative;
-	width: 20px;
-	background-image: url('../img/cart.svg');
-}
-
-.cart__link::after {
-	content: '1';
-	position: absolute;
-	left: 26px;
-	top: 1px;
-	font-weight: 300;
-}
-
-.header__burger {
+.header__burger_menu {
 	height: 21px;
 	display: flex;
 	flex-direction: column;
@@ -813,22 +763,17 @@
 	outline: none;
 }
 
-.burger__line {
-	width: 30px;
-	height: 2px;
-	background-color: #fff;
-	border-radius: 10px;
-}
 
-.line-1-menu {
+
+.line-1_menu {
 	transform: rotate(45deg) translate(8px, 2px);
 }
 
-.line-2-menu {
+.line-2_menu {
 	display: none;
 }
 
-.line-3-menu {
+.line-3_menu {
 	transform: rotate(-45deg) translate(9px, -3px)
 }
 
@@ -921,10 +866,19 @@
 	align-self: flex-start;
 	letter-spacing: 1.2px;
 }
-
-
-
-
+.footer-hero__title {
+	font-family: 'Forum';
+	font-size: 48px;
+	letter-spacing: .9px;
+	text-transform: uppercase;
+}
+.footer-hero__link {
+	display: block;
+	align-self: flex-end;
+	padding-right: 54px;
+	letter-spacing: 1.2px;
+	background: url('../img/search-arrow.svg') right -1px no-repeat;
+}
 
 .menu-footer__wrapper {
 	display: flex;

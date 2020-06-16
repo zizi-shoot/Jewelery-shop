@@ -38,7 +38,7 @@
 	</header>
 	<section class="menu">
 		<header class="menu__header menu-header">
-			<div class="header__container container">
+			<div class="header__container header__container_menu container">
 				<img class="header__logo" src="./img/menu-logo.svg" alt="Moon River">
 				<ul class="header__links head-links">
 					<li class="head-links__favorite favorite"><a href="" class="favorite__link icon-link"
@@ -48,10 +48,10 @@
 					</li>
 					<li class="head-links__cart cart"><a href="" class="cart__link icon-link" aria-label="Корзина"></a></li>
 				</ul>
-				<button class="header__burger burger" aria-label="Меню">
-					<span class="burger__line line-1"></span>
-					<span class="burger__line line-2"></span>
-					<span class="burger__line line-3"></span>
+				<button class="header__burger header__burger_menu burger" aria-label="Меню">
+					<span class="burger__line line-1_menu"></span>
+					<span class="burger__line line-2_menu"></span>
+					<span class="burger__line line-3_menu"></span>
 				</button>
 			</div>
 		</header>
@@ -296,16 +296,18 @@
 
 		function openMenu() {
 			document.querySelector('.menu').style = 'bottom: 0';
+			document.querySelector('.header__burger').classList.add('header__burger-menu');
 		}
 
 		function closeMenu() {
 			document.querySelector('.menu').style = 'bottom: 100vh'
 		}
-function changeBurger() {
-	document.querySelectorAll('.line-1')[1].classList.add('line-1-menu');
-	document.querySelectorAll('.line-2')[1].classList.add('line-2-menu');
-	document.querySelectorAll('.line-3')[1].classList.add('line-3-menu');
-}
+
+		function changeBurger() {
+			document.querySelectorAll('.line-1')[1].classList.add('line-1-menu');
+			document.querySelectorAll('.line-2')[1].classList.add('line-2-menu');
+			document.querySelectorAll('.line-3')[1].classList.add('line-3-menu');
+		}
 
 	</script>
 </body>
