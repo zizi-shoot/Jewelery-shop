@@ -29,8 +29,11 @@
 				</li>
 				<li class="head-links__cart cart">
 					<a href="" class="cart__link icon-link" aria-label="Корзина" data-amount="0"></a>
-					<ul class="cart__storage cart-storage">
-					</ul>
+					<div class="cart__wrapper">
+						<ul class="cart__storage cart-storage">
+						</ul>
+						<button class="cart__order-btn">Оформить заказ</button>
+					</div>
 				</li>
 			</ul>
 			<button class="header__burger burger" aria-label="Меню">
@@ -194,6 +197,13 @@
 
 		<section class="stock">
 			<h2 class="visually-hidden">Ассортимент магазина</h2>
+			<article class="stock__detail-card detail-card">
+				<img src="./img/jows.png" alt="Кольцо Jow`s" class="deatail-card__img">
+				<h3 class="deatail-card__title title">Кольцо Jow’s, Cartier</h3>
+				<p class="deatail-card__info">Белое золото, бриллианты</p>
+				<p class="deatail-card__price">674 000</p>
+				<button class="detail-card__btn">К корзине</button>
+			</article>
 			<ul class="stock__list">
 				<li class="stock__item stock-item">
 					<article class="stock-item__article item-article item-1">
