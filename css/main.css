@@ -102,12 +102,6 @@
 	margin-bottom: 2vh;
 }
 
-.storage-article__wrapper {
-	display: flex;
-	flex-direction: column;
-	width: 182px;
-}
-
 .cart-storage__article {
 	display: flex;
 	justify-content: space-between;
@@ -119,6 +113,7 @@
 }
 
 .storage-article__title {
+	width: 182px;
 	font-size: 18px;
 }
 
