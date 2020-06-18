@@ -8,17 +8,47 @@ let cartStorage = document.querySelector('.cart-link__storage');
 let cartStorageAll = document.querySelectorAll('.cart-link__storage');
 let detailCardBtn = document.querySelector('.detail-card__btn');
 let menuBtnAll = document.querySelectorAll('.menu-item__btn');
-
 let cartLinkAll = document.querySelectorAll('.cart__link');
+
 let menu = document.querySelector('.menu');
 let menuNav = document.querySelector('.menu__nav');
 let menuFooter = document.querySelector('.menu__footer');
+
 let detCardImg = document.querySelector('.detail-card__img');
 let detCardTitle = document.querySelector('.detail-card__title');
 let detCardInfo = document.querySelector('.detail-card__info');
 let detCardPrice = document.querySelector('.detail-card__price');
+
 let stockCard = document.querySelector('.stock__detail-card');
 let stockList = document.querySelector('.stock__list');
+
+let searchBtn = document.querySelector('.search__btn');
+let searchInput = document.querySelector('#city');
+
+let shopMap;
+let cityArr = [
+	{
+		city: 'москва',
+		coords: [55.755773068976765, 37.614608000000004],
+	},
+	{
+		city: 'санкт-петербург',
+		coords: [59.93603406416603, 30.3147275],
+	},
+	{
+		city: 'самара',
+		coords: [53.207388571205435, 50.19790299999996],
+	},
+	{
+		city: 'казань',
+		coords: [55.82957756889806, 49.11858599999993],
+	},
+	{
+		city: 'калининград',
+		coords: [54.71805156995347, 20.5000935],
+	}
+]
+
 getCartAmount();
 
 titleLinkAll.forEach(e => e.addEventListener('click', (event) => event.preventDefault()));
@@ -30,7 +60,27 @@ cartStorageAll.forEach(e => e.addEventListener('click', delCartItem));
 stockItemAll.forEach(e => e.addEventListener('click', displayDetailCard))
 detailCardBtn.addEventListener('click', moveToCart);
 menuBtnAll.forEach(e => e.addEventListener('mouseover', activateMenuBtn));
-cartLinkAll.forEach(e => e.addEventListener('mouseover', getCartAmount))
+cartLinkAll.forEach(e => e.addEventListener('mouseover', getCartAmount));
+searchBtn.addEventListener('click', searchShop);
+ymaps.ready(init);
+
+function init() {
+	shopMap = new ymaps.Map('map', {
+		center: [55.75576985630771, 37.61765359698488],
+		zoom: 13,
+	});
+}
+
+function searchShop(event) {
+	event.preventDefault();
+	let city = searchInput.value.toLowerCase();
+	cityArr.forEach(function(e) {
+		if (e.city === city) {
+			shopMap.setCenter(e.coords, 13)
+		}
+	})
+}
+
 
 function activateMenuBtn(event) {
 	let menuBtnAllActive = document.querySelectorAll('.menu-item__btn--active');
