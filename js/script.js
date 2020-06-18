@@ -5,7 +5,7 @@ let headerBurger = document.querySelector('.header__burger');
 let menuHeaderBurger = document.querySelector('.menu .header__burger');
 let stockItemAll = document.querySelectorAll('.stock__item');
 let cartStorage = document.querySelector('.cart-storage');
-let cartStorageAll = document.querySelectorAll('.cart__storage');
+let cartStorageAll = document.querySelectorAll('.cart-link__storage');
 let linksCartAll = document.querySelectorAll('.head-links__cart');
 let detailCardBtn = document.querySelector('.detail-card__btn');
 let menuBtnAll = document.querySelectorAll('.menu-item__btn');
@@ -14,7 +14,7 @@ let cartLinkAll = document.querySelectorAll('.cart__link');
 let menu = document.querySelector('.menu');
 let menuNav = document.querySelector('.menu__nav');
 let menuFooter = document.querySelector('.menu__footer');
-let cartWrapper = document.querySelector('.cart__wrapper');
+let cartWrapper = document.querySelector('.cart-link__wrapper');
 let detCardImg = document.querySelector('.detail-card__img');
 let detCardTitle = document.querySelector('.detail-card__title');
 let detCardInfo = document.querySelector('.detail-card__info');
@@ -22,18 +22,17 @@ let detCardPrice = document.querySelector('.detail-card__price');
 let stockCard = document.querySelector('.stock__detail-card');
 let stockList = document.querySelector('.stock__list');
 
-
 getCartAmount();
+
 titleLinkAll.forEach(e => { e.addEventListener('click', (event) => event.preventDefault()) });
 headerBurger.addEventListener('click', openMenu);
 menuHeaderBurger.addEventListener('click', closeMenu);
 stockItemAll.forEach(e => { e.addEventListener('click', addCartItem) })
 cartStorageAll.forEach(e => { e.addEventListener('click', delCartItem) });
-linksCartAll.forEach(e => { e.addEventListener('mouseover', displayCart) });
-linksCartAll.forEach(e => { e.addEventListener('mouseout', hideCart) });
 stockItemAll.forEach(e => { e.addEventListener('click', displayDetailCard) })
 detailCardBtn.addEventListener('click', moveToCart);
-menuBtnAll.forEach(e => e.addEventListener('mouseover', activateMenuBtn))
+menuBtnAll.forEach(e => e.addEventListener('mouseover', activateMenuBtn));
+cartLinkAll.forEach(e => e.addEventListener('mouseover', getCartAmount))
 
 function activateMenuBtn(event) {
 	menuBtnAllActive.forEach(e => e.classList.remove('menu-item__btn--active'));
@@ -41,8 +40,13 @@ function activateMenuBtn(event) {
 }
 
 function getCartAmount() {
-	let cartAmount = document.querySelector('.cart__storage').children.length;
+	let cartAmount = document.querySelector('.cart-link__storage').children.length;
 	cartLinkAll.forEach(e => e.setAttribute('data-amount', cartAmount));
+	if (cartAmount === 0) {
+		cartLinkAll.forEach(e => e.style.pointerEvents = 'none');
+	} else {
+		cartLinkAll.forEach(e => e.style.pointerEvents = 'auto')
+	}
 }
 
 function openMenu() {
@@ -75,18 +79,6 @@ function addCartItem() {
 										</article>`;
 	cartStorage.append(item);
 	getCartAmount();
-}
-
-function displayCart() {
-	if (cartStorage.children.length > 0) {
-		cartWrapper.style.display = 'flex';
-	}
-}
-
-function hideCart(event) {
-	if (event.target.className == 'cart__wrapper') {
-		cartWrapper.style.display = 'none';
-	}
 }
 
 function delCartItem(event) {
@@ -128,7 +120,6 @@ function moveToCart() {
 		top: 0,
 		behavior: 'smooth',
 	});
-	displayCart();
 	hideDetailCard();
 }
 
