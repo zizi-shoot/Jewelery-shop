@@ -945,10 +945,11 @@
 	text-transform: uppercase;
 	background-color: transparent;
 	border: none;
+	outline: none;
 	cursor: pointer;
 }
 
-.menu-item__btn_active {
+.menu-item__btn--active {
 	border-bottom: 1.8px solid #fff;
 }
 

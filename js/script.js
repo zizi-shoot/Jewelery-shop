@@ -10,6 +10,12 @@ document.querySelectorAll('.head-links__cart').forEach(e => { e.addEventListener
 document.querySelectorAll('.head-links__cart').forEach(e => { e.addEventListener('mouseout', hideCart) });
 document.querySelectorAll('.stock__item').forEach(e => { e.addEventListener('click', displayDetailCard) })
 document.querySelector('.detail-card__btn').addEventListener('click', moveToCart);
+document.querySelectorAll('.menu-item__btn').forEach(e => e.addEventListener('mouseover', activateMenuBtn))
+
+function activateMenuBtn(event) {
+	document.querySelectorAll('.menu-item__btn--active').forEach(e => e.classList.remove('menu-item__btn--active'));
+	event.target.classList.add('menu-item__btn--active');
+}
 
 function getCartAmount() {
 	let cartAmount = document.querySelector('.cart__storage').children.length;
