@@ -24,6 +24,9 @@ let stockList = document.querySelector('.stock__list');
 
 let searchBtn = document.querySelector('.search__btn');
 let searchInput = document.querySelector('#city');
+let searchForm = document.querySelector('.location__search');
+let searchError = document.querySelector('.search__error');
+
 
 let shopMap;
 let cityArr = [
@@ -73,12 +76,23 @@ function init() {
 
 function searchShop(event) {
 	event.preventDefault();
+	if (searchInput.value === '') {
+		searchForm.style.borderBottom = '1.8px solid rgb(255, 107, 107)';
+		searchError.style.opacity = 1;
+	}
+	setTimeout(() => {
+		searchError.style.opacity = 0;
+		searchForm.style.borderBottom = '1.8px solid #fff';
+	}, 2000);
+
 	let city = searchInput.value.toLowerCase();
-	cityArr.forEach(function(e) {
+	
+	cityArr.forEach(function (e) {
 		if (e.city === city) {
 			shopMap.setCenter(e.coords, 13)
 		}
-	})
+	});
+	searchInput.value = '';
 }
 
 
