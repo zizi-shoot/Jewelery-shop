@@ -8,7 +8,7 @@ let cartStorage = document.querySelector('.cart-link__storage');
 let cartStorageAll = document.querySelectorAll('.cart-link__storage');
 let detailCardBtn = document.querySelector('.detail-card__btn');
 let menuBtnAll = document.querySelectorAll('.menu-item__btn');
-let menuBtnAllActive = document.querySelectorAll('.menu-item__btn--active');
+
 let cartLinkAll = document.querySelectorAll('.cart__link');
 let menu = document.querySelector('.menu');
 let menuNav = document.querySelector('.menu__nav');
@@ -21,29 +21,30 @@ let stockCard = document.querySelector('.stock__detail-card');
 let stockList = document.querySelector('.stock__list');
 getCartAmount();
 
-titleLinkAll.forEach(e => { e.addEventListener('click', (event) => event.preventDefault()) });
-cartLinkAll.forEach(e => { e.addEventListener('click', (event) => event.preventDefault()) });
+titleLinkAll.forEach(e => e.addEventListener('click', (event) => event.preventDefault()));
+cartLinkAll.forEach(e => e.addEventListener('click', (event) => event.preventDefault()));
 headerBurger.addEventListener('click', openMenu);
 menuHeaderBurger.addEventListener('click', closeMenu);
-stockItemAll.forEach(e => { e.addEventListener('click', addCartItem) })
-cartStorageAll.forEach(e => { e.addEventListener('click', delCartItem) });
-stockItemAll.forEach(e => { e.addEventListener('click', displayDetailCard) })
+stockItemAll.forEach(e => e.addEventListener('click', addCartItem))
+cartStorageAll.forEach(e => e.addEventListener('click', delCartItem));
+stockItemAll.forEach(e => e.addEventListener('click', displayDetailCard))
 detailCardBtn.addEventListener('click', moveToCart);
-menuBtnAll.forEach(e => { e.addEventListener('mouseover', activateMenuBtn) });
-cartLinkAll.forEach(e => { e.addEventListener('mouseover', getCartAmount) })
+menuBtnAll.forEach(e => e.addEventListener('mouseover', activateMenuBtn));
+cartLinkAll.forEach(e => e.addEventListener('mouseover', getCartAmount))
 
 function activateMenuBtn(event) {
-	menuBtnAllActive.forEach(e => { e.classList.remove('menu-item__btn--active') });
+	let menuBtnAllActive = document.querySelectorAll('.menu-item__btn--active');
+	menuBtnAllActive.forEach(e => e.classList.remove('menu-item__btn--active'));
 	event.target.classList.add('menu-item__btn--active');
 }
 
 function getCartAmount() {
 	let cartAmount = document.querySelector('.cart-link__storage').children.length;
-	cartLinkAll.forEach(e => { e.setAttribute('data-amount', cartAmount) });
+	cartLinkAll.forEach(e => e.setAttribute('data-amount', cartAmount));
 	if (cartAmount === 0) {
-		cartLinkAll.forEach(e => { e.style.pointerEvents = 'none' });
+		cartLinkAll.forEach(e => e.style.pointerEvents = 'none');
 	} else {
-		cartLinkAll.forEach(e => { e.style.pointerEvents = 'auto' })
+		cartLinkAll.forEach(e => e.style.pointerEvents = 'auto')
 	}
 }
 
