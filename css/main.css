@@ -467,20 +467,20 @@
 	transition: left .5s;
 }
 
-.deatail-card__img {
+.detail-card__img {
 	width: 80px;
 }
 
-.deatail-card__title {
+.detail-card__title {
 	font-size: 18px;
 }
 
 
-.deatail-card__info {
+.detail-card__info {
 	font-size: 14px;
 }
 
-.deatail-card__price {
+.detail-card__price {
 	font-size: 16px;
 }
 
