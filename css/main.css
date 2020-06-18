@@ -45,11 +45,6 @@
 	transition: transform .2s;
 }
 
-/* .favorite__link:hover,
-.account__link:hover,
-.cart__link:hover {
-	transform: translateY(-5px) scale(1.5);
-} */
 
 .account__link {
 	width: 15px;
