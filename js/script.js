@@ -28,29 +28,7 @@ let searchForm = document.querySelector('.location__search');
 let searchError = document.querySelector('.search__error');
 
 
-let shopMap;
-let cityArr = [
-	{
-		city: 'москва',
-		coords: [55.755773068976765, 37.614608000000004],
-	},
-	{
-		city: 'санкт-петербург',
-		coords: [59.93603406416603, 30.3147275],
-	},
-	{
-		city: 'самара',
-		coords: [53.207388571205435, 50.19790299999996],
-	},
-	{
-		city: 'казань',
-		coords: [55.82957756889806, 49.11858599999993],
-	},
-	{
-		city: 'калининград',
-		coords: [54.71805156995347, 20.5000935],
-	}
-]
+
 
 getCartAmount();
 
@@ -64,8 +42,44 @@ stockItemAll.forEach(e => e.addEventListener('click', displayDetailCard))
 detailCardBtn.addEventListener('click', moveToCart);
 menuBtnAll.forEach(e => e.addEventListener('mouseover', activateMenuBtn));
 cartLinkAll.forEach(e => e.addEventListener('mouseover', getCartAmount));
+
+
+// !!Код для карты
+
+let mapPlacemark;
+let shopMap;
+let cityArr = [
+	{
+		city: 'москва',
+		coords: [55.755773068976765, 37.614608000000004],
+		address: 'Манежная площадь, 1к2'
+	},
+	{
+		city: 'санкт-петербург',
+		coords: [59.93603406416603, 30.3147275],
+		address: 'Малая Морская, 4'
+	},
+	{
+		city: 'самара',
+		coords: [53.207388571205435, 50.19790299999996],
+		address: '​Дыбенко, 30'
+	},
+	{
+		city: 'казань',
+		coords: [55.82957756889806, 49.11858599999993],
+		address: 'Ямашева проспект, 46'
+	},
+	{
+		city: 'калининград',
+		coords: [54.71805156995347, 20.5000935],
+		address: 'Театральная, 30'
+	}
+]
+
 searchBtn.addEventListener('click', searchShop);
 ymaps.ready(init);
+
+
 
 function init() {
 	shopMap = new ymaps.Map('map', {
@@ -76,25 +90,46 @@ function init() {
 
 function searchShop(event) {
 	event.preventDefault();
+	let city = searchInput.value.toLowerCase();
+	let cityNameArr = [];
+	cityArr.forEach((e) => cityNameArr.push(e.city));
 	if (searchInput.value === '') {
-		searchForm.style.borderBottom = '1.8px solid rgb(255, 107, 107)';
-		searchError.style.opacity = 1;
+		searchError.innerHTML = 'Вы ничего не ввели! Пожалуйста укажите город.'
+		displyaSearchError();
+	} else if (!cityNameArr.includes(city)) {
+		searchError.innerHTML = 'В таком городе у нас нет магазинов!';
+		displyaSearchError();
 	}
+
 	setTimeout(() => {
 		searchError.style.opacity = 0;
 		searchForm.style.borderBottom = '1.8px solid #fff';
 	}, 2000);
 
-	let city = searchInput.value.toLowerCase();
-	
 	cityArr.forEach(function (e) {
 		if (e.city === city) {
-			shopMap.setCenter(e.coords, 13)
+			shopMap.setCenter(e.coords, 13);
+			mapPlacemark = new ymaps.Placemark(shopMap.getCenter(), {
+				balloonContentHeader: e.city.toUpperCase(),
+				balloonContentBody: e.address,
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: '../img/marker.svg',
+				iconImageSize: [60, 60],
+				iconImageOffset: [-5, -38],
+
+			});
+			shopMap.geoObjects.add(mapPlacemark);
 		}
 	});
 	searchInput.value = '';
 }
 
+function displyaSearchError() {
+	searchForm.style.borderBottom = '1.8px solid rgb(255, 107, 107)';
+	searchError.style.opacity = 1;
+}
+//  !!Конец кода для карты
 
 function activateMenuBtn(event) {
 	let menuBtnAllActive = document.querySelectorAll('.menu-item__btn--active');
