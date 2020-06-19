@@ -114,7 +114,7 @@ function searchShop(event) {
 				balloonContentBody: e.address,
 			}, {
 				iconLayout: 'default#image',
-					iconImageHref: 'https://imageup.ru/img287/3621121/marker.png',
+				iconImageHref: 'img/marker.svg',
 				iconImageSize: [60, 60],
 				iconImageOffset: [-5, -38],
 
