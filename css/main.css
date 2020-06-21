@@ -89,7 +89,6 @@
 .cart-link__storage {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 2vh;
 }
 
 .cart-storage__item {
@@ -133,23 +132,6 @@
 	border-radius: 50%;
 	width: 25px;
 	height: 25px;
-}
-
-.cart-link__order-btn {
-	padding: 10px 20px;
-	background-color: #EFC58B;
-	border: none;
-	outline: none;
-	border-radius: 7px;
-	cursor: pointer;
-}
-
-.cart__order-btn:hover {
-	filter: brightness(0.9);
-}
-
-.cart__order-btn:active {
-	transform: scale(.98);
 }
 
 .header__burger {
