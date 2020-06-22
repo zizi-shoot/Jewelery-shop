@@ -26,6 +26,8 @@ let searchBtn = document.querySelector('.search__btn');
 let searchInput = document.querySelector('#city');
 let searchForm = document.querySelector('.location__search');
 let searchError = document.querySelector('.search__error');
+let body = document.querySelector('body');
+
 
 
 
@@ -151,12 +153,14 @@ function openMenu() {
 	menu.style.bottom = 0;
 	menuNav.style.right = 0;
 	menuFooter.style.top = 0;
+	body.classList.add('disable-scroll');
 }
 
 function closeMenu() {
 	menu.style.bottom = '100vh';
 	menuNav.style.right = '100vw';
 	menuFooter.style.top = '200vh';
+	body.classList.remove('disable-scroll');
 }
 
 function addCartItem() {

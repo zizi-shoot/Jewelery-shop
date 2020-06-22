@@ -1024,3 +1024,12 @@
 .menu-footer__contacts {
 	margin-bottom: 5.4vh;
 }
+.disable-scroll {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
