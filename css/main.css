@@ -859,6 +859,7 @@
 	height: 100vh;
 	z-index: 10;
 	bottom: 100vh;
+	bottom: 0;
 	transition: bottom .5s;
 }
 
@@ -896,6 +897,7 @@
 .menu__nav {
 	position: relative;
 	right: 100vw;
+	right: 0;
 	background-color: #2f2f2f;
 	margin-bottom: auto;
 	transition: right .2s .5s;
@@ -972,6 +974,7 @@
 .menu__footer {
 	position: relative;
 	top: 200vh;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 70px;
